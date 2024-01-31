@@ -17,8 +17,6 @@ app = Client(
      in_memory=True,
 )
 
-SEND_ID = -1001943074057
-
 ccs = []
 
 with open('cards.txt', 'r') as r:
