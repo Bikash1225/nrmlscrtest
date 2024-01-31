@@ -15,7 +15,6 @@ app = Client(
      api_hash=API_HASH,
      session_string=str(SESSION),
      in_memory=True,
-     workdir=current_directory
 )
 
 SEND_ID = -1001943074057
