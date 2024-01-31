@@ -1,5 +1,6 @@
 from defs import getUrl, getcards, phone
 from pyrogram import Client, filters
+from pyrogram.types import Message
 import asyncio
 import os, sys
 import re
