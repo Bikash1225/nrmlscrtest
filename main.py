@@ -6,7 +6,7 @@ import re
 import requests
 from datetime import datetime
 import pytz
-import config
+from config import API_ID, API_HASH, SESSION, SEND_ID
 
 
 app = Client(
