@@ -37,7 +37,7 @@ async def my_event_handler(client: Client, message: Message):
     current_time = datetime.now(tz=ist_timezone).strftime("%a %b %d %H:%M:%S %Y")
 
     if message.reply_markup:
-        text = message.reply_markup.stringify()
+#        text = message.reply_markup.stringify()
         urls = getUrl(text)
         if not urls:
             return
