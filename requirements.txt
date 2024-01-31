@@ -1,3 +1,6 @@
 pyrogram
 requests
 pytz
+asyncio
+python-dotenv
+TgCrypto
