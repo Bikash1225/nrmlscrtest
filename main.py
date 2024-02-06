@@ -65,8 +65,25 @@ async def my_event_handler(client: Client, message: Message):
     await app.send_message(
         chat_id=SEND_ID,
         text=f"""
-.fi {cc}|{mes}|{ano}|{cvv}
-,)
+══════════════════════
+                тσχιᴄ ѕᴄяαρρєя    
+══════════════════════
+
+**• ᴄᴀʀᴅ ⥁**
+  ⤷ `{cc}|{mes}|{ano}|{cvv}` 
+**━━━━━━━━━━━━━━━━━━━**
+**• ʙɪɴ ➻** `{cc[:6]}` | {bin_json['country_flag']}
+
+**• ɪɴғᴏ ➻**  `{bin_json['type']}` 
+**• ᴛʏᴘᴇ ➻** `{bin_json['brand']}`
+**• ʙᴀɴᴋ ➻** `{bin_json['bank']}`
+**• ᴄᴏᴜɴᴛʀʏ ➻** `{bin_json['country_name']}` | {bin_json['country_flag']} 
+
+**• ᴇxᴛʀᴀ ➻**
+  ⤷ `{extra}xxxx|{mes}|{ano}|{cvv}` 
+**━━━━━━━━━━━━━━━━━━━**
+**Time:** `{current_time}` (IST)
+""",)
 
 
 
