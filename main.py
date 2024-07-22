@@ -11,7 +11,7 @@ from config import API_ID, API_HASH, SESSION, SEND_ID
 
 
 app = Client(
-     name='NormalScrap',
+     name='NormalScrapper',
      api_id=API_ID,
      api_hash=API_HASH,
      session_string=str(SESSION),
@@ -31,7 +31,7 @@ for x in temp_cards:
         continue
 
 
-@app.on_message(filters.text)
+@app.on_message(filters.chat(chats) & filters.text)
 async def my_event_handler(client: Client, message: Message):
     ist_timezone = pytz.timezone('Asia/Kolkata')
     current_time = datetime.now(tz=ist_timezone).strftime("%a %b %d %H:%M:%S %Y")
@@ -90,7 +90,7 @@ async def my_event_handler(client: Client, message: Message):
 @app.on_message(filters.outgoing & filters.regex(r'\.lives'))
 async def my_event_handler(client: Client, message: Message):
     await message.reply_document(document='cards.txt')
-    await asyncio.sleep(30)
+    await asyncio.sleep(5)
 
 
 app.run()
