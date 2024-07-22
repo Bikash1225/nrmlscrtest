@@ -19,6 +19,11 @@ app = Client(
 )
 
 ccs = []
+chats = [
+    -1001833380321,
+    -1002215624242,
+    -1001882011822
+]
 
 with open('cards.txt', 'r') as r:
     temp_cards = r.read().splitlines()
