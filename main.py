@@ -37,7 +37,7 @@ for x in temp_cards:
 
 
 @app.on_message(filters.chat(chats) & filters.text)
-async def my_event_handler(client: Client, message: Message):
+async def my_event_handler(client: Client, message: types.Message):
     ist_timezone = pytz.timezone('Asia/Kolkata')
     current_time = datetime.now(tz=ist_timezone).strftime("%a %b %d %H:%M:%S %Y")
 
@@ -93,7 +93,7 @@ async def my_event_handler(client: Client, message: Message):
 
 
 @app.on_message(filters.outgoing & filters.regex(r'\.lives'))
-async def my_event_handler(client: Client, message: Message):
+async def my_event_handler(client: Client, message: types.Message):
     await message.reply_document(document='cards.txt')
     await asyncio.sleep(5)
 
