@@ -95,7 +95,6 @@ async def my_event_handler(client: Client, message: types.Message):
 @app.on_message(filters.outgoing & filters.regex(r'\.lives'))
 async def my_event_handler(client: Client, message: types.Message):
     await message.reply_document(document='cards.txt')
-    await asyncio.sleep(5)
 
 
 app.run()
